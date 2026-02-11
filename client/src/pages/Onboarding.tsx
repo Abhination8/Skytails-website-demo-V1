@@ -297,13 +297,13 @@ export default function Onboarding() {
 
               <div className="grid md:grid-cols-3 gap-6 mb-12">
                 {[
-                  { name: "Classic", desc: "Safe savings, low risk.", color: "bg-slate-100", activeColor: "border-slate-400" },
-                  { name: "Core", desc: "Balanced growth.", color: "bg-primary/5", activeColor: "border-primary ring-2 ring-primary/20" },
-                  { name: "Premium", desc: "Aggressive growth + Perks", color: "bg-indigo-50", activeColor: "border-indigo-400" }
+                  { name: "Classic", amount: 5, desc: "Safe savings, low risk.", color: "bg-slate-100", activeColor: "border-slate-400" },
+                  { name: "Core", amount: 10, desc: "Balanced growth.", color: "bg-primary/5", activeColor: "border-primary ring-2 ring-primary/20" },
+                  { name: "Premium", amount: 15, desc: "Aggressive growth + Perks", color: "bg-indigo-50", activeColor: "border-indigo-400" }
                 ].map((tier) => (
                   <div
                     key={tier.name}
-                    onClick={() => updateData({ planTier: tier.name as any })}
+                    onClick={() => updateData({ planTier: tier.name as any, monthlyContribution: tier.amount })}
                     className={`
                       relative p-6 rounded-3xl border-2 cursor-pointer transition-all duration-300 hover:scale-[1.02]
                       ${data.planTier === tier.name ? `${tier.activeColor} bg-white shadow-xl shadow-primary/5` : "border-transparent bg-white shadow-md hover:shadow-lg"}
@@ -315,6 +315,7 @@ export default function Onboarding() {
                       </div>
                     )}
                     <h3 className="font-display font-bold text-xl mb-1">{tier.name}</h3>
+                    <p className="font-bold text-primary mb-1">${tier.amount}/mo</p>
                     <p className="text-slate-500 text-sm mb-4">{tier.desc}</p>
                     <div className="h-1 w-full bg-slate-100 rounded-full overflow-hidden">
                       <div className={`h-full ${data.planTier === tier.name ? "bg-primary" : "bg-slate-300"}`} style={{ width: tier.name === "Classic" ? '30%' : tier.name === "Core" ? '60%' : '90%' }} />
@@ -326,8 +327,8 @@ export default function Onboarding() {
               <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 max-w-xl mx-auto">
                 <div className="flex justify-between items-center mb-6">
                   <div>
-                    <h4 className="font-bold text-slate-900">Monthly Contribution</h4>
-                    <p className="text-sm text-slate-500">How much to save?</p>
+                    <h4 className="font-bold text-slate-900">Custom Contribution</h4>
+                    <p className="text-sm text-slate-500">Fine-tune your savings</p>
                   </div>
                   <div className="text-3xl font-display font-bold text-primary">
                     ${data.monthlyContribution}
