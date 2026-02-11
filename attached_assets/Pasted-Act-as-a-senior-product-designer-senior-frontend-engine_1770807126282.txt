@@ -1,0 +1,159 @@
+Act as a senior product designer + senior frontend engineer.
+
+Build a HIGH-FIDELITY WEBSITE PROTOTYPE for a fintech-style pet savings platform called "SkyTails".
+
+Goal:
+The existing UX has high drop-off because onboarding requires long forms and financial details too early.
+This prototype must demonstrate a TRUST-FIRST, LOW-FRICTION onboarding experience that improves conversion.
+
+IMPORTANT CONTEXT:
+Users currently:
+1. Sign up
+2. Enter pet details
+3. Enter financial/KYC details
+4. Then see dashboard
+
+This prototype must redesign the journey using modern UX psychology.
+
+--------------------------------------------------
+PRODUCT POSITIONING
+--------------------------------------------------
+SkyTails is NOT insurance.
+It is a savings + investment platform for pet care.
+
+Tone:
+- Trustworthy fintech
+- Emotional pet-parent focus
+- Clean, modern, minimal
+
+Design inspiration:
+Stripe onboarding
+Notion onboarding
+Wealthfront onboarding
+Airbnb trust UI
+
+--------------------------------------------------
+TECH STACK
+--------------------------------------------------
+- React
+- TailwindCSS
+- Framer Motion animations
+- Single-page prototype
+- No backend required (mock data)
+
+--------------------------------------------------
+NEW UX FLOW TO IMPLEMENT
+--------------------------------------------------
+
+STEP 0 – LANDING HERO (Trust First)
+- Clear headline:
+  "Build your pet’s financial future — without insurance complexity."
+- Show 3 trust badges:
+  Secure Accounts
+  Automated Investing
+  Social Mission
+
+Primary CTA:
+"Start in 30 seconds"
+
+Secondary CTA:
+"See Sample Dashboard"
+
+--------------------------------------------------
+
+STEP 1 – PET FIRST (EMOTIONAL ENTRY)
+Instead of signup forms first, ask:
+- Pet name
+- Pet type (Dog, Cat, Other)
+- Age slider
+- Upload pet avatar (mock)
+
+Show live preview card updating as user types.
+
+Microcopy:
+"Let’s start with who this is really about ❤️"
+
+--------------------------------------------------
+
+STEP 2 – PLAN SELECTION (SIMPLIFIED)
+Display 3 cards:
+Classic
+Core
+Premium
+
+Use toggle:
+Monthly savings estimate slider
+
+When user selects plan:
+Animate a mini “Future Care Fund” growth chart.
+
+--------------------------------------------------
+
+STEP 3 – DASHBOARD PREVIEW (EARLY REWARD)
+Before financial info:
+Show a simulated dashboard with:
+- Pet avatar
+- Savings progress
+- Upcoming care suggestions
+- AI investment summary
+
+Label:
+"Your future dashboard preview"
+
+This builds trust BEFORE asking for money details.
+
+--------------------------------------------------
+
+STEP 4 – LIGHTWEIGHT ACCOUNT CREATION
+Only ask:
+- Email
+- Password
+- Country
+
+Progress indicator:
+Step 4 of 5
+
+--------------------------------------------------
+
+STEP 5 – FINANCIAL DETAILS (PROGRESSIVE DISCLOSURE)
+Collapse into expandable sections:
+[ ] Identity verification
+[ ] Payment setup
+[ ] Investment preferences
+
+Each opens as an accordion instead of long form.
+
+--------------------------------------------------
+
+UX PRINCIPLES
+--------------------------------------------------
+- Never show more than 3 fields at once
+- Large whitespace
+- Fintech trust colors (soft blue, white, charcoal)
+- Smooth transitions between steps
+- Sticky progress bar at top
+- Friendly microcopy
+
+--------------------------------------------------
+
+COMPONENTS REQUIRED
+--------------------------------------------------
+- Stepper navigation
+- Animated cards
+- Plan selector
+- Dashboard mock
+- Trust badges
+- Progress bar
+
+--------------------------------------------------
+
+OUTPUT REQUIREMENTS
+--------------------------------------------------
+Generate:
+1. Full React code
+2. Modular components
+3. Clean folder structure
+4. Ready-to-run Replit project
+
+Focus ONLY on frontend UX prototype.
+Do NOT implement real authentication or payments.
