@@ -4,16 +4,18 @@ import { z } from "zod";
 
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
+  username: text("username").notNull().unique(),
   email: text("email").notNull(),
+  password: text("password").notNull(), 
   country: text("country"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
 export const pets = pgTable("pets", {
   id: serial("id").primaryKey(),
-  userId: integer("user_id").notNull(), // In a real app, references users.id
+  userId: integer("user_id").notNull(), 
   name: text("name").notNull(),
-  type: text("type").notNull(), // Dog, Cat, Other
+  type: text("type").notNull(), 
   age: integer("age").notNull(),
   avatarUrl: text("avatar_url"),
 });
@@ -21,7 +23,7 @@ export const pets = pgTable("pets", {
 export const plans = pgTable("plans", {
   id: serial("id").primaryKey(),
   userId: integer("user_id").notNull(),
-  tier: text("tier").notNull(), // Classic, Core, Premium
+  tier: text("tier").notNull(), 
   monthlyContribution: integer("monthly_contribution").notNull(),
 });
 

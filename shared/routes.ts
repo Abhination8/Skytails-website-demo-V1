@@ -12,11 +12,28 @@ export const errorSchemas = {
   internal: z.object({
     message: z.string(),
   }),
+  unauthorized: z.object({
+    message: z.string(),
+  }),
 };
 
 export const api = {
-  // We'll primarily use client-side state for the prototype as requested,
-  // but these endpoints enable persistence if we want to save the final result.
+  auth: {
+    me: {
+      method: 'GET' as const,
+      path: '/api/me' as const,
+      responses: {
+        200: z.custom<typeof users.$inferSelect>().nullable(),
+      },
+    },
+    logout: {
+      method: 'POST' as const,
+      path: '/api/logout' as const,
+      responses: {
+        200: z.object({ success: z.boolean() }),
+      },
+    }
+  },
   onboarding: {
     submit: {
       method: 'POST' as const,
@@ -32,7 +49,22 @@ export const api = {
       },
     },
   },
-  // Basic health check or mock data endpoints
+  dashboard: {
+    get: {
+      method: 'GET' as const,
+      path: '/api/dashboard' as const,
+      responses: {
+        200: z.object({
+          user: z.custom<typeof users.$inferSelect>(),
+          pet: z.custom<typeof pets.$inferSelect>().optional(),
+          plan: z.custom<typeof plans.$inferSelect>().optional(),
+          projectedGrowth: z.array(z.object({ year: z.string(), amount: z.number() })),
+          careSuggestions: z.array(z.string()),
+        }),
+        401: errorSchemas.unauthorized,
+      },
+    },
+  },
   mock: {
     dashboard: {
       method: 'GET' as const,

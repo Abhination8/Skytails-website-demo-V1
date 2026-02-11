@@ -6,7 +6,7 @@ import { Input } from "@/components/Input";
 import { PetCard } from "@/components/PetCard";
 import { GrowthChart } from "@/components/GrowthChart";
 import { useSubmitOnboarding, useMockDashboard } from "@/hooks/use-onboarding";
-import { ChevronRight, ChevronLeft, ShieldCheck, CheckCircle2, TrendingUp, Sparkles, Lock } from "lucide-react";
+import { ChevronRight, ChevronLeft, ShieldCheck, CheckCircle2, TrendingUp, Sparkles, Lock, Dog, Cat } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { useToast } from "@/hooks/use-toast";
 
@@ -104,7 +104,7 @@ export default function Onboarding() {
       });
       
       // In a real app, redirect to dashboard
-      // setLocation("/dashboard");
+      setLocation("/dashboard");
     } catch (error) {
       toast({
         variant: "destructive",
