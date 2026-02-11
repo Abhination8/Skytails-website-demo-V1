@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { useLocation } from "wouter";
-import { api, buildUrl } from "@shared/routes";
+import { api } from "@shared/routes";
 import { Button } from "@/components/Button";
-import { PetCard } from "@/components/PetCard";
 import { GrowthChart } from "@/components/GrowthChart";
 import { queryClient, apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2, LogOut, TrendingUp, ShieldCheck, Heart } from "lucide-react";
 
 export default function Dashboard() {
-  const [location, setLocation] = useLocation();
+  const [, setLocation] = useLocation();
   const { toast } = useToast();
 
-  const { data: dashboard, isLoading, error } = useQuery({
+  const { data: dashboard, isLoading, error } = useQuery<any>({
     queryKey: [api.dashboard.get.path],
     retry: false,
   });
@@ -115,7 +114,7 @@ export default function Dashboard() {
                 Care Suggestions
               </h3>
               <ul className="space-y-4">
-                {careSuggestions.map((s, i) => (
+                {careSuggestions.map((s: string, i: number) => (
                   <li key={i} className="flex gap-3 text-sm text-slate-300">
                     <div className="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center text-[10px] font-bold text-primary shrink-0">
                       {i + 1}

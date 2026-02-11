@@ -1,5 +1,5 @@
 import { db } from "./db";
-import { users, pets, plans, type User, type InsertUser, type InsertPet, type InsertPlan } from "@shared/schema";
+import { users, pets, plans, type User, type InsertUser, type InsertPet, type InsertPlan, type Pet, type Plan } from "@shared/schema";
 import { eq } from "drizzle-orm";
 import session from "express-session";
 import MemoryStore from "memorystore";

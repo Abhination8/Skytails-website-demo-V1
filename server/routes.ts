@@ -57,8 +57,8 @@ export async function registerRoutes(
       const input = api.onboarding.submit.input.parse(req.body);
       const user = await storage.createUserWithData({
         ...input.user,
-        username: input.user.email, // Use email as username for MVP
-      }, input.pet, input.plan);
+        username: input.user.email,
+      }, { ...input.pet, userId: 0 }, { ...input.plan, userId: 0 });
       
       req.login(user, (err) => {
         if (err) throw err;
