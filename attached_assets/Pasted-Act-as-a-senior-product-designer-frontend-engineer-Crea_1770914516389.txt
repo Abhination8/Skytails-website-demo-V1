@@ -1,0 +1,157 @@
+Act as a senior product designer + frontend engineer.
+
+Create a HIGH-FIDELITY website prototype for a fintech pet-savings platform called “SkyTails”.
+
+The new UX should be INSPIRED by the storytelling and modular layout style of Basepaws.com, but adapted for a PET FINANCIAL PLATFORM instead of a DNA testing product.
+
+This is NOT a clone.
+It is a trust-first redesign using similar UX principles.
+
+--------------------------------------------------
+GOAL
+--------------------------------------------------
+Current SkyTails website has high drop-off because it feels too financial too early.
+Users lose trust before seeing value.
+
+The new design must:
+- Feel emotional and pet-first
+- Explain benefits visually
+- Introduce savings plans like product cards
+- Delay signup pressure
+
+--------------------------------------------------
+TECH STACK
+--------------------------------------------------
+React
+TailwindCSS
+Framer Motion
+Single page prototype
+No backend required
+
+--------------------------------------------------
+NEW WEBSITE STRUCTURE
+--------------------------------------------------
+
+SECTION 1 – HERO (BASEPAWS-STYLE CLARITY)
+--------------------------------------------------
+Large pet image + soft gradient background.
+
+Headline:
+"Build a healthier financial future for your pet."
+
+Subtext:
+"Automated savings designed around your pet’s life — not complicated insurance."
+
+Primary CTA:
+Start Your Pet Journey
+
+Secondary CTA:
+See How It Works
+
+Add trust icons:
+Secure Accounts
+Regulated Investing
+Social Mission
+
+--------------------------------------------------
+
+SECTION 2 – WHY SKYTAILS (VISUAL BENEFITS GRID)
+--------------------------------------------------
+Create 3 animated cards:
+
+Proactive Pet Care
+Emergency Readiness
+Smarter Long-Term Planning
+
+Each card should animate on hover.
+
+--------------------------------------------------
+
+SECTION 3 – HOW IT WORKS (BASEPAWS STYLE FLOW)
+--------------------------------------------------
+3 horizontal visual steps:
+
+1. Add Your Pet
+2. Choose a Plan
+3. Watch Your Care Fund Grow
+
+Use icons and minimal text.
+
+--------------------------------------------------
+
+SECTION 4 – PLANS AS PRODUCTS (BASEPAWS PRODUCT CARD STYLE)
+--------------------------------------------------
+Show plans as clean product cards:
+
+Classic
+Core
+Premium
+
+Each card includes:
+- Monthly contribution
+- Future care benefits
+- Animated progress chart preview
+
+CTA on each card:
+Preview My Dashboard
+
+--------------------------------------------------
+
+SECTION 5 – WHAT YOU GET (INSPIRED BY BASEPAWS BENEFIT BLOCKS)
+--------------------------------------------------
+Grid layout:
+
+Pet Health Insights
+Automated Savings
+Emergency Access
+Community Impact
+
+Include icons + short emotional descriptions.
+
+--------------------------------------------------
+
+SECTION 6 – DASHBOARD PREVIEW (CRITICAL TRUST MOMENT)
+--------------------------------------------------
+Show a mock dashboard UI:
+
+Pet avatar
+Savings growth
+Upcoming care suggestions
+AI investment summary
+
+Label:
+"This is what your SkyTails experience looks like."
+
+--------------------------------------------------
+
+SECTION 7 – SOCIAL MISSION STORY
+--------------------------------------------------
+Large emotional section showing shelters and pets.
+
+Headline:
+"Every plan helps another animal find a home."
+
+--------------------------------------------------
+
+UX RULES
+--------------------------------------------------
+- Emotional pet imagery first, financial forms later
+- Large whitespace
+- Soft blue + white fintech palette
+- Smooth scroll transitions
+- Mobile responsive
+- Modern typography
+- No long forms on landing page
+
+--------------------------------------------------
+
+OUTPUT REQUIREMENTS
+--------------------------------------------------
+Generate:
+- Full React code
+- Component-based structure
+- Reusable sections
+- Animated UI using Framer Motion
+
+Focus on UX storytelling like Basepaws,
+but designed specifically for a fintech pet savings brand.
